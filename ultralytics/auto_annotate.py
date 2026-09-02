@@ -5,8 +5,8 @@ from ultralytics import YOLO
 # ==========================================
 # 1. Directory Setup (Adjust paths as needed)
 # ==========================================
-INPUT_IMAGES_FOLDER = r'D:\Upgrade model Yolo11n-pose\ultralytics\KLYVERO_Dataset\images'
-OUTPUT_LABELS_FOLDER = r'D:\Upgrade model Yolo11n-pose\ultralytics\KLYVERO_Dataset\labels'
+INPUT_IMAGES_FOLDER = r'D:\Upgrade model Yolo11n-pose\ultralytics\KLYVERO_Dataset123456\images'
+OUTPUT_LABELS_FOLDER = r'D:\Upgrade model Yolo11n-pose\ultralytics\KLYVERO_Dataset123456\labels'
 
 # Ensure the output directory exists
 os.makedirs(OUTPUT_LABELS_FOLDER, exist_ok=True)
