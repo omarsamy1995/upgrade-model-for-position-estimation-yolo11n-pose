@@ -1,0 +1,30 @@
+# ============================================================
+# ONLY IGNORE LOCAL / GENERATED FILES
+# ============================================================
+
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Training results
+runs/
+
+# Python package metadata
+ultralytics.egg-info/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment secrets
+.env
