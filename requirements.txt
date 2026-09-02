@@ -1,0 +1,9 @@
+ultralytics
+opencv-python
+torch
+torchvision
+numpy
+pillow
+pyyaml
+requests
+matplotlib
