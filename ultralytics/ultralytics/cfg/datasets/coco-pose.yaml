@@ -15,8 +15,8 @@ val: val2017.txt # val images (relative to 'path') 2346 images
 test: test-dev2017.txt # 20288 of 40670 images, submit to https://codalab.lisn.upsaclay.fr/competitions/7403
 
 # Keypoints
-kpt_shape: [17, 3] # number of keypoints, number of dims (2 for x,y or 3 for x,y,visible)
-flip_idx: [0, 2, 1, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11, 14, 13, 16, 15]
+kpt_shape: [12, 3] # عدد النقاط × 3 (x,y,visible)
+flip_idx: [1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10]
 
 # Classes
 names:
@@ -25,11 +25,6 @@ names:
 # Keypoint names per class
 kpt_names:
   0:
-    - nose
-    - left_eye
-    - right_eye
-    - left_ear
-    - right_ear
     - left_shoulder
     - right_shoulder
     - left_elbow
@@ -43,22 +38,4 @@ kpt_names:
     - left_ankle
     - right_ankle
 
-# Download script/URL (optional)
-download: |
-  from pathlib import Path
 
-  from ultralytics.utils import ASSETS_URL
-  from ultralytics.utils.downloads import download
-
-  # Download labels
-  dir = Path(yaml["path"])  # dataset root dir
-
-  urls = [f"{ASSETS_URL}/coco2017labels-pose.zip"]
-  download(urls, dir=dir.parent)
-
-  # Download data (test2017.zip excluded: ground truth is withheld, only used for the CodaLab test-dev split)
-  urls = [
-      "http://images.cocodataset.org/zips/train2017.zip",  # 19G, 118k images
-      "http://images.cocodataset.org/zips/val2017.zip",  # 1G, 5k images
-  ]
-  download(urls, dir=dir / "images", threads=3)
